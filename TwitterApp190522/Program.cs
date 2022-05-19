@@ -12,7 +12,10 @@ namespace TwitterApp190522
 
             var userCredentials = new TwitterCredentials("CONSUMER_KEY", "CONSUMER_SECRET", "ACCESS_TOKEN", "ACCESS_TOKEN_SECRET");
             var userClient = new TwitterClient(userCredentials);
-
+            string filter1 = "C#";
+            string filter2 = "Python";
+            string filter3 = "javascript";
+            string filter4 = "pascal";
 
             // Create a simple stream containing only tweets with the keyword France
 
@@ -45,10 +48,43 @@ namespace TwitterApp190522
                 Console.WriteLine();
                 Console.WriteLine();
 
+                if (tweetText.Contains(filter1))
+
+                {
+                    counter1++;
+                }
+                if (tweetText.Contains(filter2))
+                {
+
+                    counter2++;
+                }
+                if (tweetText.Contains(filter3))
+                {
+                    counter3++;
+                }
+            
+                Console.WriteLine(
+                    filter1 + ":" + counter1 + ", " +
+                    filter2 + ":" + counter2 + ", " +
+                    filter3 + ":" + counter3
+                   
 
 
-                await stream.StartMatchingAnyConditionAsync();
+                    );
+                Console.WriteLine("----------------");
+
+                if (counttweets == 100)
+                {
+                    stream.Stop();
+                    Console.WriteLine("Complete!");
+                }
+
+                counttweets++;
             };
+
+
+            await stream.StartMatchingAnyConditionAsync();
+            
 
 
          
