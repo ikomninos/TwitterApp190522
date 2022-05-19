@@ -18,6 +18,8 @@ namespace TwitterApp190522
 
             var stream = userClient.Streams.CreateFilteredStream();
             stream.AddTrack("java");
+            stream.AddTrack("c#");
+            stream.AddTrack("python");
 
             stream.MatchingTweetReceived += (sender, eventReceived) =>
             {
