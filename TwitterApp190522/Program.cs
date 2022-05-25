@@ -10,7 +10,7 @@ namespace TwitterApp190522
         {
             Console.WriteLine("Hello World!");
 
-            var userCredentials = new TwitterCredentials("CONSUMER_KEY", "CONSUMER_SECRET", "ACCESS_TOKEN", "ACCESS_TOKEN_SECRET");
+            var userCredentials = new TwitterCredentials("IBuHFUmoHfEuBuulMEZsHUaCq", "Q51B2bLhAj5rIuXtgEhVcWuJuEjeK63qcf9PV40ufKgO91TAcr", "1509553057486495746-A7vG0iC5Pci9cGWPI6PWooAKgoDFnk", "MZBHe037LtpkWQgaoRZGtoTnyCVGneg3eb1358RYU8ZuU");
             var userClient = new TwitterClient(userCredentials);
             string filter1 = "C#";
             string filter2 = "Python";
