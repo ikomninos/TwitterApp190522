@@ -16,6 +16,7 @@ AUTHORS
 
 
 CONTRIBUTING
+
 @ManosKosmatos @EneidaLame @VaiosKaraoulis 
 
 
